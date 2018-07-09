@@ -7,44 +7,17 @@ var http = require("http")
 var app = express();
 var PORT = 4500;
 
-var server = http.createServer(handleRequest);
+app.use(express.static(path.join(__dirname, './app/public')));
 
-function handleRequest(req, res){
-        var path = req.url;
-        console.log(path);
-    if(path.endsWith('.css')){
-    
-        var name = path.getFileName();
-    
-        fs.readFile(__dirname + path, function(err, data){
-            res.writeHead(200, {"Content-Type": "text/css"});
-            res.end(data);
-        });
-    }else if(path.endsWith('.js')){
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extend: true}));
+app.use(bodyParser.text());
 
-        fs.readFile(__dirname + path, function(err, data) {
-            
-        res.writeHead(200, { "Content-Type": "text/javascript" });
-        res.end(data);
-    });
-    }else{
-        fs.readFile(__dirname + path, function(err, data) {
-            res.writeHead(200, { "Content-Type": "text/html" });
-            res.end(data);
-          });		
-    }
-}
+// require(path.join(__dirname, './app/routing/apiRoutes'))(app);
 
-// app.get("/", function(req, res){
-//     console.log(res);
-//     res.sendFile(path.join(__dirname, "public/home.html"));
-// });
+require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
 
-// app.get("/survey", function(req, res){
-//     console.log(res);
-//     res.sendFile(path.join(__dirname, "public/survey.html"))
-// })
 
-server.listen(PORT, function(){
+app.listen(PORT, function(){
     console.log("Listening on PORT " + PORT);
 });
