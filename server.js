@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extend: true}));
 app.use(bodyParser.text());
 
-// require(path.join(__dirname, './app/routing/apiRoutes'))(app);
+require(path.join(__dirname, './app/routing/apiRoutes'))(app);
 
 require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
 
