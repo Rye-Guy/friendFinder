@@ -25,22 +25,23 @@ module.exports = function(app){
 
 
                 diff += Math.abs(friends[i].scores[x] - userResponses[x]);
+                console.log(diff);
             }
+            console.log(difference);
 
             if(diff < difference){
-                console.log('Closest match found = ' + diff);
-				console.log('Friend name = ' + friends[i].name);
-				console.log('Friend image = ' + friends[i].photo);
 
 				totalDifference = diff;
-				matchName = friends[i].name;
-				matchImage = friends[i].photo;
+                matchName = friends[i].name;
+                matchImage = friends[i].photo;
             }
         }
 
+
+
         friends.push(userInput);
 
-
+        res.json({status: 'OK', matchName: matchName, matchImage: matchImage});     
     });
 
 }
