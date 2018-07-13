@@ -1,7 +1,7 @@
 var friends = [{
-        name: 'Psycho Pete',
-        imgURL: 'https://source.unsplash.com/xe68QiMaDrQ/1600x900',
-        score: [
+        "name": 'Psycho Pete',
+        "photo": 'https://source.unsplash.com/xe68QiMaDrQ/1600x900',
+        "scores": [
             "2",
             "3",
             "1",

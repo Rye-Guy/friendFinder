@@ -40,19 +40,19 @@
   <!-- Add your site or application content here -->
   <div class="row">
     <div class="input-field col s12">
-      <input type="text" class="validate" id="name">
+      <input type="text" class="validate" id="userName">
       <label for="text">Name</label>
     </div>
   </div>
   <div class="row">
     <div class="input-field col s12">
-      <input type="text" class="validate" id="imageUrl">
+      <input type="text" class="validate" id="userImage">
       <label for="link">Image URL</label>
     </div>
   </div>
 
   <div class="input-field col s12">
-    <select>
+    <select id="question1">
       <option value="question1" disabled selected>Your mind is always buzzing with unexplored ideas and plans.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
       <option value="2">Option 2</option>
@@ -63,7 +63,7 @@
     <label>Question 1</label>
   </div>
   <div class="input-field col s12">
-    <select>
+    <select id="question2">
       <option value="question2" disabled selected>Generally speaking, you rely more on your experience than your imagination.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
       <option value="2">Option 2</option>
@@ -74,7 +74,7 @@
     <label>Question 2</label>
   </div>
   <div class="input-field col s12">
-    <select>
+    <select id="question3">
       <option value="question3" disabled selected>You find it easy to stay relaxed and focused even when there is some pressure.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
       <option value="2">Option 2</option>
@@ -85,7 +85,7 @@
     <label>Question 3</label>
   </div>
   <div class="input-field col s12">
-    <select>
+    <select id="question4">
       <option value="question4" disabled selected>You rarely do something just out of sheer curiosity.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
       <option value="2">Option 2</option>
@@ -96,7 +96,7 @@
     <label>Question 4</label>
   </div>
   <div class="input-field col s12">
-    <select>
+    <select id="question5">
       <option value="question5" disabled selected>People can rarely upset you.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
       <option value="2">Option 2</option>
@@ -107,7 +107,7 @@
     <label>Question 5</label>
   </div>
   <div class="input-field col s12">
-    <select>
+    <select id="question6">
       <option value="question6" disabled selected>It is often difficult for you to relate to other people’s feelings.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
       <option value="2">Option 2</option>
@@ -118,7 +118,7 @@
     <label>Question 6</label>
   </div>
   <div class="input-field col s12">
-    <select>
+    <select id="question7">
       <option value="question7" disabled selected>In a discussion, truth should be more important than people’s sensitivities.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
       <option value="2">Option 2</option>
@@ -129,7 +129,7 @@
     <label>Question 7</label>
   </div>
   <div class="input-field col s12">
-    <select>
+    <select id="question8">
       <option value="question8" disabled selected>You rarely get carried away by fantasies and ideas.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
       <option value="2">Option 2</option>
@@ -140,7 +140,7 @@
     <label>Question 8</label>
   </div>
   <div class="input-field col s12">
-    <select>
+    <select id="question9">
       <option value="question9" disabled selected>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
       <option value="2">Option 2</option>
@@ -151,7 +151,7 @@
     <label>Question 9</label>
   </div>
   <div class="input-field col s12">
-    <select>
+    <select id="question10">
       <option value="question10" disabled selected>You feel more energetic after spending time with a group of people.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
       <option value="2">Option 2</option>
@@ -178,21 +178,22 @@
 
     $('#submitBtn').on('click', function(event){
       event.preventDefault();
+      console.log('something was pushed')
     
       var userInput = {
-          name: $('#userName').val().trim(),
-          photo: $('#userPhoto').val().trim(),
+          name: $('#userName').val(),
+          image: $('#userImage').val(),
           scores: [
-                  $('#question1').val().trim(),
-                  $('#question2').val().trim(),
-                  $('#question3').val().trim(),
-                  $('#question4').val().trim(),
-                  $('#question5').val().trim(),
-                  $('#question6').val().trim(),
-                  $('#question7').val().trim(),
-                  $('#question8').val().trim(),
-                  $('#question9').val().trim(), 
-                  $('#question10').val().trim()
+                  $('#question1').val(),
+                  $('#question2').val(),
+                  $('#question3').val(),
+                  $('#question4').val(),
+                  $('#question5').val(),
+                  $('#question6').val(),
+                  $('#question7').val(),
+                  $('#question8').val(),
+                  $('#question9').val(), 
+                  $('#question10').val()
                   ]           
       };
 

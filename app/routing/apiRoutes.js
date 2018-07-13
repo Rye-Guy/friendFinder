@@ -1,7 +1,7 @@
 var path = require('path');
 console.log("hello");
 var friends = require('../data/friends.js');
-
+console.log(friends.length);
 module.exports = function(app){
     app.get('/api/friends', function(req, res){
         console.log(req);
@@ -11,7 +11,7 @@ module.exports = function(app){
 
     app.post('/api/friends', function(req,  res){
         var userInput = req.body;
-        
+        console.log(friends);
         var userResponses = userInput.scores;
 
         var matchName = '';
@@ -22,7 +22,7 @@ module.exports = function(app){
             var diff = 0;
         
             for(x = 0; x < userResponses.length; x++){
-                //Math.abs prevents makes values always compute BIGNUM - SMALLNUM preventing negative numbers. This makes sure we get the number we need for the friendship test.
+
 
                 diff += Math.abs(friends[i].scores[x] - userResponses[x]);
             }
