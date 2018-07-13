@@ -2,16 +2,16 @@ var friends = [{
         name: 'Psycho Pete',
         imgURL: 'https://source.unsplash.com/xe68QiMaDrQ/1600x900',
         score: [
-            2,
-            3,
-            1,
-            3,
-            5,
-            4,
-            3,
-            5,
-            1,
-            4
+            "2",
+            "3",
+            "1",
+            "3",
+            "5",
+            "4",
+            "3",
+            "5",
+            "1",
+            "4"
         ]
 
     },
