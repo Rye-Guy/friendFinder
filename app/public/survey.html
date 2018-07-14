@@ -10,37 +10,20 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-
+  <link rel="stylesheet" href="./css/style.css">
   <!-- <link rel="stylesheet" href="css/normalize.css" type="text/css">
   <link rel="stylesheet" href="css/main.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css"> -->
-  <style>
-    .header__heading {
-      text-align: center;
-      padding-top: 120px;
-    }
-
-    .btn {
-      display: block;
-      width: 180px;
-      margin: auto;
-    }
-
-    .parallax-container {
-      height: 100vh;
-    }
-  </style>
 </head>
 
 <body>
     <header class="nav-down">
         <nav>
           <div class="nav-wrapper">
-              <a href="https://rye-guy.github.io/MaterialPortfolio/" class="brand-logo">Friend Finder</a>
+              <a href="home.html" class="brand-logo">Friend Finder</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#portfolio">Portfolio</a></li>
-  
+                  <li><a href="api/friends">API Friends List</a></li>
+                  <li><a href="https://github.com/Rye-Guy/friendFinder">GitHub Repo</a></li>
                 </ul>
               </div>
            </nav>
@@ -50,20 +33,21 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div class="row">
-    <div class="input-field col s12">
+  <main class="col s8">
+  <div class="row s8">
+    <div class="input-field col s8">
       <input type="text" class="validate" id="userName">
       <label for="text">Name</label>
     </div>
   </div>
-  <div class="row">
-    <div class="input-field col s12">
+  <div class="row s8">
+    <div class="input-field col s8">
       <input type="text" class="validate" id="userImage">
       <label for="link">Image URL</label>
     </div>
   </div>
 
-  <div class="input-field col s12">
+  <div class="input-field col s8">
     <select id="question1">
       <option value="question1" disabled selected>Your mind is always buzzing with unexplored ideas and plans.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
@@ -74,7 +58,7 @@
     </select>
     <label>Question 1</label>
   </div>
-  <div class="input-field col s12">
+  <div class="input-field col s8">
     <select id="question2">
       <option value="question2" disabled selected>Generally speaking, you rely more on your experience than your imagination.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
@@ -85,7 +69,7 @@
     </select>
     <label>Question 2</label>
   </div>
-  <div class="input-field col s12">
+  <div class="input-field col s8">
     <select id="question3">
       <option value="question3" disabled selected>You find it easy to stay relaxed and focused even when there is some pressure.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
@@ -96,7 +80,7 @@
     </select>
     <label>Question 3</label>
   </div>
-  <div class="input-field col s12">
+  <div class="input-field col s8">
     <select id="question4">
       <option value="question4" disabled selected>You rarely do something just out of sheer curiosity.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
@@ -107,7 +91,7 @@
     </select>
     <label>Question 4</label>
   </div>
-  <div class="input-field col s12">
+  <div class="input-field col s8">
     <select id="question5">
       <option value="question5" disabled selected>People can rarely upset you.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
@@ -118,7 +102,7 @@
     </select>
     <label>Question 5</label>
   </div>
-  <div class="input-field col s12">
+  <div class="input-field col s8">
     <select id="question6">
       <option value="question6" disabled selected>It is often difficult for you to relate to other people’s feelings.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
@@ -129,7 +113,7 @@
     </select>
     <label>Question 6</label>
   </div>
-  <div class="input-field col s12">
+  <div class="input-field col s8">
     <select id="question7">
       <option value="question7" disabled selected>In a discussion, truth should be more important than people’s sensitivities.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
@@ -140,7 +124,7 @@
     </select>
     <label>Question 7</label>
   </div>
-  <div class="input-field col s12">
+  <div class="input-field col s8">
     <select id="question8">
       <option value="question8" disabled selected>You rarely get carried away by fantasies and ideas.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
@@ -151,7 +135,7 @@
     </select>
     <label>Question 8</label>
   </div>
-  <div class="input-field col s12">
+  <div class="input-field col s8">
     <select id="question9">
       <option value="question9" disabled selected>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
@@ -162,7 +146,7 @@
     </select>
     <label>Question 9</label>
   </div>
-  <div class="input-field col s12">
+  <div class="input-field col s8">
     <select id="question10">
       <option value="question10" disabled selected>You feel more energetic after spending time with a group of people.</option>
       <option value="1">Option 1 (Strongly Disagree)</option>
@@ -174,6 +158,7 @@
     <label>Question 10</label>
   </div>
   <button href="#modal1" data-target="modal1" class="btn" id="submitBtn">Submit</button>
+</div>
 
   <div id="modal1" class="modal">
     <div class="modal-content">
