@@ -5,7 +5,7 @@ var fs = require("fs");
 var http = require("http");
 
 var app = express();
-var PORT = 4500;
+var PORT = process.env.PORT || 4500;
 
 app.use(express.static(path.join(__dirname, './app/public')));
 
